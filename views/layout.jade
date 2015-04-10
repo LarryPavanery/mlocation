@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title	
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/socket.io/socket.io.js')
+    script(type='text/javascript').
+     var socket = io.connect('http://localhost:3000');
+     socket.on('news', function (data) {
+      document.getElementById('msg').innerHTML = data;
+      
+     });
+  body
+    block content
+    
+script(type='text/javascript').
+ function getgeoip(json){
+  socket.emit('event:frontend:location', json);
+ }
+
+script(src="http://www.telize.com/geoip?callback=getgeoip")

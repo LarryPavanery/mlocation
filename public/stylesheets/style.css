@@ -1,0 +1,17 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.msg {
+	color: blue;
+	font-size: 2em;
+	text-align: center;
+	height: 32px;
+	display: block;
+}
+
+.msg:hover {
+	background: blue;
+	color: white;
+}
